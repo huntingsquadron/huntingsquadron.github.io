@@ -1,3 +1,3 @@
-# huntingsquadron.github.io
+# Hunting Squadron
 
 Hello world!
