@@ -4,9 +4,7 @@ title:  "Decrypting GuLoader with new Ghidra Emulator"
 date:   2023-06-25 11:32:00 +0800
 author: Lasq
 categories: jekyll update
-tag: malware analysis
-tag: reverse engineering
-tag: ghidra
+tags: malware analysis, reverse engineering, ghidra
 ---
 
 # Decrypting GuLoader with new Ghidra Emulator
