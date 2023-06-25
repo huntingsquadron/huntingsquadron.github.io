@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Decrypting GuLoader with new Ghidra Emulator"
-date:   2023-06-25 12:00:00 +0800
+date:   2023-06-25 11:32:00 +0800
 author: Lasq
 categories: jekyll update
 tag: malware analysis
