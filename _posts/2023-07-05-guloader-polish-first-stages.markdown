@@ -53,3 +53,20 @@ What is relevant here, and (as far as I can tell) specific to GuLoader, it downl
 2. Encrypted second part of shellcode (main loader code)
 3. A plaintext powershell code, that will serve as stage 2 code to inject and execute shellcode inside powershell process memory
 
+
+The decoded base64 value is being stored in the variable `$Brdmaskin180` - this will be importan when analyzing a second stage shellcode.
+
+In the end, second stage shellcode is extracted from the base64 decoded value with `[System.Text.Encoding]::ASCII.GetString()` and executed with `iex`
+
+# Powershell stage 2
+
+Stage 2 of powershell code, is also obfuscated:
+
+![Powershell stage 2 obfuscated](/assets/img/2023-07-05-guloader-polish-first-stages/04_powershell_stage2_obfuscated.png)
+
+After deobfuscation and clean-up, this is how the code looks like:
+
+![Powershell stage 2 deobfuscated and cleaned](/assets/img/2023-07-05-guloader-polish-first-stages/05_powershell_stage2_deobfuscated.png)
+
+
+There is quite a lot to unroll here. 
