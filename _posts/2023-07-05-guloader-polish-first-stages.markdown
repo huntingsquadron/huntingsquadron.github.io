@@ -14,10 +14,10 @@ published: true
 
 The following GuLoader sample was recently published by Piotr Kowalczyk from CERT Orange Polska:
 
-(https://twitter.com/pmmkowalczyk/status/1675806993057996802)
+<https://twitter.com/pmmkowalczyk/status/1675806993057996802>
 
 
-(https://www.virustotal.com/gui/file/8bce65195a07ca72693f21081aa1d86deb2fdd5784d0e666c0833a9f9bdaf78d/detection)
+<https://www.virustotal.com/gui/file/8bce65195a07ca72693f21081aa1d86deb2fdd5784d0e666c0833a9f9bdaf78d/detection>
 
 Zapytaine ofertowe Testosteel.vbs
 
@@ -100,14 +100,14 @@ The rest of the code below is responsible for loading a shellcode to memory and 
 
 The memory allocation and copy part is quite straightforward, and there is not much magic here. If you are still unsure what is going on here, I recommend reading the official documentation from Microsoft: 
 
-* VirtualAlloc: (https://learn.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-virtualalloc)
-* Marshal.Copy: (https://learn.microsoft.com/en-us/dotnet/api/system.runtime.interopservices.marshal.copy?view=net-7.0#system-runtime-interopservices-marshal-copy(system-byte()-system-int32-system-intptr-system-int32))
+* VirtualAlloc: <https://learn.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-virtualalloc>
+* Marshal.Copy: <https://learn.microsoft.com/en-us/dotnet/api/system.runtime.interopservices.marshal.copy?view=net-7.0#system-runtime-interopservices-marshal-copy(system-byte()-system-int32-system-intptr-system-int32)>
 
 The interesting part of this code is how the shellcode is executed. First of all, they use a "callback routine" to indirectly execute the injected code. Indirect execution with callback was heavily covered in other articles, so I won't go into details here. In short, they pass an address of a specific code that should be executed when some specific event happens in the system. In this case, a memory address of the first RWX buffer is passed via variable `$Unantici3`, which is an entry point of our decryption stub. 
 
 If you want to know more about the usage of callback routines to execute shellcode, I recommend this article:
 
-(https://osandamalith.com/2021/04/01/executing-shellcode-via-callbacks/)
+<https://osandamalith.com/2021/04/01/executing-shellcode-via-callbacks/>
 
 The other 2 arguments passed to `CallWindowProcA` are interesting. Namely the value of variable `$Muedd`, which holds the address of a second (RW) buffer, and the value of variable `$Glarma`, which holds a pointer to `ntdll.NtProtectVirtualMemory`.
 
