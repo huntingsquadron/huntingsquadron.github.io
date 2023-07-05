@@ -5,7 +5,7 @@ date:   2023-07-05 11:32:00 +0800
 author: Lasq
 categories: malware analysis
 tags: malware_analysis, reverse_engineering, ghidra, guloader, malware
-published: false
+published: true
 ---
 
 # New GuLoader campaign against Polish institutions - analysis of a Powershell code
